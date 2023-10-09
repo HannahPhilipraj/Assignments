@@ -1,0 +1,6 @@
+D:\CSharp training\Assignments\assignment_6\ConcessionDLL\ConcessionDLL\obj\Debug\ConcessionDLL.csproj.AssemblyReference.cache
+D:\CSharp training\Assignments\assignment_6\ConcessionDLL\ConcessionDLL\obj\Debug\ConcessionDLL.csproj.CoreCompileInputs.cache
+D:\CSharp training\Assignments\assignment_6\ConcessionDLL\ConcessionDLL\bin\Debug\ConcessionDLL.dll
+D:\CSharp training\Assignments\assignment_6\ConcessionDLL\ConcessionDLL\bin\Debug\ConcessionDLL.pdb
+D:\CSharp training\Assignments\assignment_6\ConcessionDLL\ConcessionDLL\obj\Debug\ConcessionDLL.dll
+D:\CSharp training\Assignments\assignment_6\ConcessionDLL\ConcessionDLL\obj\Debug\ConcessionDLL.pdb

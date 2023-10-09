@@ -1,0 +1,13 @@
+D:\CSharp training\Assignments\assignment_7\assignment_7\bin\Debug\assignment_7.exe.config
+D:\CSharp training\Assignments\assignment_7\assignment_7\bin\Debug\assignment_7.exe
+D:\CSharp training\Assignments\assignment_7\assignment_7\bin\Debug\assignment_7.pdb
+D:\CSharp training\Assignments\assignment_7\assignment_7\obj\Debug\assignment_7.csproj.CoreCompileInputs.cache
+D:\CSharp training\Assignments\assignment_7\assignment_7\obj\Debug\assignment_7.exe
+D:\CSharp training\Assignments\assignment_7\assignment_7\obj\Debug\assignment_7.pdb
+D:\CSharp training\Assignments(C#)\assignment_7\assignment_7\bin\Debug\assignment_7.exe.config
+D:\CSharp training\Assignments(C#)\assignment_7\assignment_7\bin\Debug\assignment_7.exe
+D:\CSharp training\Assignments(C#)\assignment_7\assignment_7\bin\Debug\assignment_7.pdb
+D:\CSharp training\Assignments(C#)\assignment_7\assignment_7\obj\Debug\assignment_7.csproj.AssemblyReference.cache
+D:\CSharp training\Assignments(C#)\assignment_7\assignment_7\obj\Debug\assignment_7.csproj.CoreCompileInputs.cache
+D:\CSharp training\Assignments(C#)\assignment_7\assignment_7\obj\Debug\assignment_7.exe
+D:\CSharp training\Assignments(C#)\assignment_7\assignment_7\obj\Debug\assignment_7.pdb

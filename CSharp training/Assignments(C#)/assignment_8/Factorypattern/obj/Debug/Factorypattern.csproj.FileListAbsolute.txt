@@ -1,0 +1,14 @@
+C:\Dummy\Factorypattern\Factorypattern\obj\Debug\Factorypattern.csproj.AssemblyReference.cache
+C:\Dummy\Factorypattern\Factorypattern\obj\Debug\Factorypattern.csproj.CoreCompileInputs.cache
+C:\Dummy\Factorypattern\Factorypattern\bin\Debug\Factorypattern.exe.config
+C:\Dummy\Factorypattern\Factorypattern\bin\Debug\Factorypattern.exe
+C:\Dummy\Factorypattern\Factorypattern\bin\Debug\Factorypattern.pdb
+C:\Dummy\Factorypattern\Factorypattern\obj\Debug\Factorypattern.exe
+C:\Dummy\Factorypattern\Factorypattern\obj\Debug\Factorypattern.pdb
+D:\CSharp training\Assignments(C#)\assignment_8\Factorypattern\obj\Debug\Factorypattern.csproj.AssemblyReference.cache
+D:\CSharp training\Assignments(C#)\assignment_8\Factorypattern\obj\Debug\Factorypattern.csproj.CoreCompileInputs.cache
+D:\CSharp training\Assignments(C#)\assignment_8\Factorypattern\obj\Debug\Factorypattern.exe
+D:\CSharp training\Assignments(C#)\assignment_8\Factorypattern\obj\Debug\Factorypattern.pdb
+D:\CSharp training\Assignments(C#)\assignment_8\Factorypattern\bin\Debug\Factorypattern.exe.config
+D:\CSharp training\Assignments(C#)\assignment_8\Factorypattern\bin\Debug\Factorypattern.exe
+D:\CSharp training\Assignments(C#)\assignment_8\Factorypattern\bin\Debug\Factorypattern.pdb

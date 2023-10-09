@@ -1,0 +1,11 @@
+D:\CSharp training\Assignments(C#)\assignment_7\ClientRemote\ClientRemote\bin\Debug\ClientRemote.exe.config
+D:\CSharp training\Assignments(C#)\assignment_7\ClientRemote\ClientRemote\bin\Debug\ClientRemote.exe
+D:\CSharp training\Assignments(C#)\assignment_7\ClientRemote\ClientRemote\bin\Debug\ClientRemote.pdb
+D:\CSharp training\Assignments(C#)\assignment_7\ClientRemote\ClientRemote\bin\Debug\assignment_7.exe
+D:\CSharp training\Assignments(C#)\assignment_7\ClientRemote\ClientRemote\bin\Debug\assignment_7.pdb
+D:\CSharp training\Assignments(C#)\assignment_7\ClientRemote\ClientRemote\bin\Debug\assignment_7.exe.config
+D:\CSharp training\Assignments(C#)\assignment_7\ClientRemote\ClientRemote\obj\Debug\ClientRemote.csproj.AssemblyReference.cache
+D:\CSharp training\Assignments(C#)\assignment_7\ClientRemote\ClientRemote\obj\Debug\ClientRemote.csproj.CoreCompileInputs.cache
+D:\CSharp training\Assignments(C#)\assignment_7\ClientRemote\ClientRemote\obj\Debug\ClientRemote.csproj.CopyComplete
+D:\CSharp training\Assignments(C#)\assignment_7\ClientRemote\ClientRemote\obj\Debug\ClientRemote.exe
+D:\CSharp training\Assignments(C#)\assignment_7\ClientRemote\ClientRemote\obj\Debug\ClientRemote.pdb

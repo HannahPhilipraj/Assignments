@@ -1,0 +1,7 @@
+D:\CSharp training\Tests(C#)\test_3\test_3\bin\Debug\test_3.exe.config
+D:\CSharp training\Tests(C#)\test_3\test_3\bin\Debug\test_3.exe
+D:\CSharp training\Tests(C#)\test_3\test_3\bin\Debug\test_3.pdb
+D:\CSharp training\Tests(C#)\test_3\test_3\obj\Debug\test_3.csproj.AssemblyReference.cache
+D:\CSharp training\Tests(C#)\test_3\test_3\obj\Debug\test_3.csproj.CoreCompileInputs.cache
+D:\CSharp training\Tests(C#)\test_3\test_3\obj\Debug\test_3.exe
+D:\CSharp training\Tests(C#)\test_3\test_3\obj\Debug\test_3.pdb

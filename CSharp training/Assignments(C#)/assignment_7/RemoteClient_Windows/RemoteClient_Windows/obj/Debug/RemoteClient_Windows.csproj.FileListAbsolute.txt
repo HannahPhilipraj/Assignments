@@ -1,0 +1,14 @@
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\bin\Debug\RemoteClient_Windows.exe.config
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\bin\Debug\RemoteClient_Windows.exe
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\bin\Debug\RemoteClient_Windows.pdb
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\bin\Debug\assignment_7.exe
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\bin\Debug\assignment_7.pdb
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\bin\Debug\assignment_7.exe.config
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\obj\Debug\RemoteClient_Windows.csproj.AssemblyReference.cache
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\obj\Debug\RemoteClient_Windows.Form1.resources
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\obj\Debug\RemoteClient_Windows.Properties.Resources.resources
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\obj\Debug\RemoteClient_Windows.csproj.GenerateResource.cache
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\obj\Debug\RemoteClient_Windows.csproj.CoreCompileInputs.cache
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\obj\Debug\RemoteClient_Windows.csproj.CopyComplete
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\obj\Debug\RemoteClient_Windows.exe
+D:\CSharp training\Assignments(C#)\assignment_7\RemoteClient_Windows\RemoteClient_Windows\obj\Debug\RemoteClient_Windows.pdb

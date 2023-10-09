@@ -1,0 +1,7 @@
+D:\CSharp training\Assignment\assign5\assign5\bin\Debug\assign5.exe.config
+D:\CSharp training\Assignment\assign5\assign5\bin\Debug\assign5.exe
+D:\CSharp training\Assignment\assign5\assign5\bin\Debug\assign5.pdb
+D:\CSharp training\Assignment\assign5\assign5\obj\Debug\assign5.csproj.AssemblyReference.cache
+D:\CSharp training\Assignment\assign5\assign5\obj\Debug\assign5.csproj.CoreCompileInputs.cache
+D:\CSharp training\Assignment\assign5\assign5\obj\Debug\assign5.exe
+D:\CSharp training\Assignment\assign5\assign5\obj\Debug\assign5.pdb
