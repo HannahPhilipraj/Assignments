@@ -1,0 +1,58 @@
+1(Retrieve a list of MANAGERS)
+  select emp_no,emp_name from employee where job like 'Manager'
+
+2(Find out the names and salaries of all employees earning more than 1000 per month)
+  select emp_name,salary from employee where salary>1000
+
+3(Display the names and salaries of all employees except JAMES)
+  select emp_name,salary from employee except 
+  select emp_name,salary from employee where emp_name like 'james'
+
+4(Find out the details of employees whose names begin with ‘S’)
+  select * from employee where emp_name like 's%'
+
+5(Find out the names of all employees that have ‘A’ anywhere in their name)
+ select emp_no,emp_name from employee where emp_name like '%a%'
+
+6(Find out the names of all employees that have ‘L’ as their third character in their name)
+  select emp_no,emp_name from employee where emp_name like '__l%'
+
+7(Compute daily salary of JONES) 
+  select emp_no,emp_name,salary,salary/30 'Daily salary' from employee where emp_name like 'jones'
+
+8(Calculate the total monthly salary of all employees)
+  select sum(salary) as 'Total salary of all employees' from employee
+
+9(Print the average annual salary)
+  select sum(salary)*12/14 'Average annual salary' from employee
+
+10(Select the name, job, salary, department number of all employees except SALESMAN from department number 30)
+  select emp_name,job,salary,dept_no from employee except
+  select emp_name,job,salary,dept_no from employee where dept_no=30 and job like 'salesman'
+
+11(List unique departments of the EMP table)
+  select distinct e.dept_no,d.dept_name from employee e,department d where d.dept_no=e.dept_no 
+
+12(List the name and salary of employees who earn more than 1500 and are in department 10 or 30. Label the columns Employee and Monthly Salary respectively)
+  select emp_name 'Employee',salary 'Monthly salary' from employee where salary>1500 and dept_no in(10,30)
+
+13(Display the name, job, and salary of all the employees whose job is MANAGER or ANALYST and their salary is not equal to 1000, 3000, or 5000) 
+  select emp_name,job,salary from employee where job in('manager','analyst') and salary not in(1000,3000,5000)
+
+14(Display the name, salary and commission for all employees whose commission amount is greater than their salary increased by 10%)
+  select emp_name,salary,comm from employee where comm>salary+salary/10
+
+15(Display the name of all employees who have two Ls in their name and are in department 30 or their manager is 7782) 
+  select emp_name from employee where emp_name like '%ll%' and dept_no=30 or manager_ID=7782
+
+16(Display the names of employees with experience of over 30 years and under 40 yrs.Count the total number of employees) 
+select(select count(*) from employee where datediff(year,hire_date,getdate()) between 30 and 40) 'Total',
+emp_name as 'Employees',datediff(year,hire_date,getdate()) 'Experience' from employee 
+where datediff(year,hire_date,getdate()) between 30 and 40
+
+17(Retrieve the names of departments in ascending order and their employees in descending order) 
+  select d.dept_name,e.emp_name from department d inner join employee e
+  on d.dept_no=e.dept_no order by d.dept_name,e.emp_name desc
+
+18(Find out experience of MILLER)
+  select emp_no,emp_name,hire_date,datediff(year,hire_date,getdate()) as Experience from employee where emp_name like 'Miller'
