@@ -1,0 +1,44 @@
+ Normalization
+
+create table Owner
+(Owner_no varchar(10) primary key,
+Owner_name varchar(max))
+
+insert into Owner values
+('CO40','Tina Murphy'),('CO93','Tony Shaw')
+select *from owner
+
+create table Client
+(Client_no varchar(10) primary key,
+Client_name varchar(30))
+
+insert into Client values
+('CR76','John Kay'),('CR56','Aline Steward')
+select * from client
+
+create table PropertyOwner
+(Property_no varchar(10) primary key,
+Property_address varchar(max),
+Property_rent int,
+Owner_no varchar(10) references owner(owner_no))
+
+insert into PropertyOwner values
+('PG4','6 Lawrence st,Glasgow',350,'CO40'),('PG36','2 Manor road Glasgow',370,'CO93'),
+('PG16','5 Novar dr,Glasgow',450,'CO93')
+select * from PropertyOwner
+
+create table Rental
+(Client_no varchar(10) references client(client_no),
+Property_no varchar(10) references propertyowner(property_no),
+Rent_start date,
+Rent_finish date,
+primary key(client_no,property_no))
+
+insert into rental values
+('CR76','PG4','1-jul-00','31-aug-01'),('CR76','PG16','1-sep-02','1-sep-02'),
+('CR56','PG4','1-sep-99','10-jun-00'),('CR56','PG36','10-oct-00','1-dec-01'),('CR56','PG16','1-nov-02','1-aug-03')
+select * from rental
+
+select c.client_no,c.client_name,po.property_no,po.property_address,po.Property_rent,r.rent_start,r.rent_finish,o.owner_name
+from Client c inner join rental r on c.client_no= r.client_no inner join propertyowner po on r.property_no=po.property_no
+inner join owner o on po.owner_no = o.owner_no
