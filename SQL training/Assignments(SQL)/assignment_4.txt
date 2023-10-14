@@ -1,0 +1,96 @@
+1(Write a T-SQL Program to find the factorial of a given number)
+
+create or alter proc Factorial(@num int)
+as
+begin
+  declare @ans int
+  set @ans = 1
+  if @num<=1
+  begin
+    return @ans
+  end
+  while @num>1
+  begin
+    set @ans = @ans * @num
+    set @num = @num - 1
+  end
+  return @ans
+end
+ 
+declare @factorial int
+execute @factorial=Factorial 4
+print 'Factorial of the number is '+ cast(@factorial as varchar(10))
+
+2(Create a stored procedure to generate multiplication tables up to a given number)
+
+create or alter proc Multiplication_tables @n1 int
+as
+begin
+   declare @n2 int
+   set @n2 = 1
+   while @n2 <= @n1
+   begin
+      declare @ans int
+      set @ans = @n2 * @n1
+      print cast(@n1 as varchar(10)) + ' x ' + cast(@n2 as varchar(10)) + ' = ' + cast(@ans as varchar(10))        
+      set @n2 = @n2 + 1
+   end
+end
+
+execute multiplication_tables 10
+      
+(Create a trigger to restrict data manipulation on EMP table during General holidays. Display the error message like “Due to Independence day you cannot manipulate data” or "Due To Diwali", you cannot manupulate" etc)
+
+create Table Holidays
+(holiday_date Date,
+holiday_name varchar(max))
+
+insert into Holidays values
+('2023-12-25', 'Christmas'),
+('2023-11-12', 'Diwali'),
+('2023-07-28', 'Eid Mubarak'),
+('2023-08-15', 'Independence Day'),
+('2023-01-15', 'Pongal'),('2023-10-14','Today')
+select * from holidays
+
+create or alter trigger DataInsertTrigger
+on employee
+for insert
+as
+begin    
+   select * from inserted   
+   raiserror('Data insertion is restricted during General holidays', 16, 1)
+   return   
+end
+
+insert into employee values(158,'Hannah','Developer',7788,'2022-10-18',2345,null,10)
+
+create or alter trigger DataDeleteTrigger
+on employee
+for delete
+as
+begin   
+   select * from deleted   
+   raiserror('Data deletion is restricted during General holidays', 16, 1)
+   return   
+end
+
+delete from employee where Emp_name='Smith'
+
+create or alter trigger DataUpdateTrigger
+on employee
+for update
+as
+begin   
+   select * from inserted
+   select * from deleted   
+   raiserror('Data updation is restricted during General holidays', 16, 1)
+   return   
+end
+
+update employee set dept_no=10 where emp_no=7369
+
+
+
+
+
