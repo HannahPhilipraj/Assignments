@@ -1,0 +1,43 @@
+1.Write a T-SQL based procedure Program to generate complete payslip of a given employee with respect to the following condition
+
+a)HRA  as 10% Of sal
+b)DA as  20% of sal
+c)PF as 8% of sal
+d)IT as 5% of sal
+e)Deductions as sum of PF and IT
+f)Gross Salary as sum of SAL,HRA,DA 
+g)Net salary as  Gross salary- Deduction
+
+create or alter proc GeneratePayslip(@ename nvarchar(30))
+as 
+begin
+declare @sal bigint,@hra float,@da float,@pf float,@it float
+declare @deduction float,@gross float,@net float
+
+set @sal=(select salary from employees where emp_name=@ename)
+print 'Salary of '+@ename+' is '+cast(@sal as varchar(10))
+print 'Payslip of the employee '
+
+set @hra=(select salary=salary/10 from employees where emp_name=@ename)
+print 'HRA of Employee : '+cast(@hra as varchar(10))
+
+set @da=(select salary=salary/5 from employees where emp_name=@ename)
+print 'DA of Employee : '+cast(@da as varchar(10))
+
+set @pf=(select salary=salary*0.08 from employees where emp_name=@ename)
+print 'PF of Employee : '+cast(@pf as varchar(10))
+
+set @it=(select salary=salary/20 from employees where emp_name=@ename)
+print 'IT of Employee : '+cast(@it as varchar(10))
+
+set @deduction=@pf+@it
+print 'Deduction : '+cast(@deduction as varchar(10))
+
+set @gross=@sal+@hra+@da
+print 'Gross Salary : '+cast(@gross as varchar(10))
+
+set @net=@gross-@deduction
+print 'Net Salary : '+cast(@net as varchar(10))
+end
+
+execute GeneratePayslip Uma
