@@ -1,7 +1,0 @@
-D:\Hannah Philipraj ICS\LINQ\Assignments(LINQ)\assignment_01\assignment_01\bin\Debug\assignment_01.exe.config
-D:\Hannah Philipraj ICS\LINQ\Assignments(LINQ)\assignment_01\assignment_01\bin\Debug\assignment_01.exe
-D:\Hannah Philipraj ICS\LINQ\Assignments(LINQ)\assignment_01\assignment_01\bin\Debug\assignment_01.pdb
-D:\Hannah Philipraj ICS\LINQ\Assignments(LINQ)\assignment_01\assignment_01\obj\Debug\assignment_01.csproj.AssemblyReference.cache
-D:\Hannah Philipraj ICS\LINQ\Assignments(LINQ)\assignment_01\assignment_01\obj\Debug\assignment_01.csproj.CoreCompileInputs.cache
-D:\Hannah Philipraj ICS\LINQ\Assignments(LINQ)\assignment_01\assignment_01\obj\Debug\assignment_01.exe
-D:\Hannah Philipraj ICS\LINQ\Assignments(LINQ)\assignment_01\assignment_01\obj\Debug\assignment_01.pdb
