@@ -17,7 +17,7 @@ create or alter proc Add_Employee @empname varchar(35), @empsal numeric(10, 2), 
 as
 begin
 declare @empno int
-    select @empno=COALESCE(max(empno), 0) + 1 from Code_Employee
+    select @empno=COALESCE(max(emp_no), 0) + 1 from Code_Employee
     insert into Code_Employee values (@empno, @empname, @empsal, @emptype)
     select * from Code_Employee
 end
