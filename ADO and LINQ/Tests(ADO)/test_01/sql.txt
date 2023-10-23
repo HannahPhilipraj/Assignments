@@ -1,0 +1,52 @@
+1)a.Create a table called Code_Employee(empno int primary key,
+   empname varchar(35), (is a required field)
+  empsal numeric(10,2) - (check empsal >=25000)
+  emptype char(1) ) (either 'F' for fulltime or 'P' part time) (Empty Table)
+
+create table Code_Employee(
+emp_no int primary key,
+emp_name varchar(35) not null, 
+emp_sal numeric(10,2) check (emp_sal >=25000),
+emp_type char(1))  
+
+
+b.Create a stored procedure to add new employee records. The procedure should accept all the employee details as input parameters, except empno. Generate the new employee no in the procedure and then insert the record
+  Test the procedure
+
+create or alter proc Add_Employee @empname varchar(35), @empsal numeric(10, 2), @emptype char(1)
+as
+begin
+declare @empno int
+    set @empno=COALESCE(max(empno), 0) + 1
+    set emp_no=@empno from Code_Employee
+    insert into Code_Employee values (@empno, @empname, @empsal, @emptype)
+end
+
+exec Add_Employee 'Harini',33000,'F'
+
+2)Write a Cursor program, that retrieves all the employees and updates salary for all employees of Department 10(Accounting) by 15%
+
+create or alter proc UpdateSalaries
+as
+begin
+   declare @Empid int,@salary bigint
+
+declare emp_cursor cursor for
+select emp_no, salary from employees where dept_no =10
+declare @new_salary bigint
+open emp_cursor
+fetch next from emp_cursor into @empid, @salary
+while @@fetch_status = 0
+begin  
+    set @new_salary = @salary+(@salary * 0.15)
+    update employees
+    set salary = @new_salary where emp_no=@Empid
+    fetch next from emp_cursor into @empid, @salary
+end
+close emp_cursor
+DEALLOCATE emp_cursor
+
+select emp_no,salary from employees where dept_no=10
+end
+ 
+exec UpdateSalaries
