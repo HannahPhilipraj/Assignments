@@ -4,18 +4,17 @@ namespace CaseStudy
 {
     interface UserInterface
     {
-		void showFirstScreen();
-		void showStudentScreen();
-		void showAdminScreen();
-		void showAllStudentsScreen();
-		void showStudentRegistrationScreen(); 
-		void introduceNewCourseScreen();
-		void showAllCoursesScreen();
+		void ShowFirstScreen();
+		void ShowStudentScreen();
+		void ShowAdminScreen();
+		void ShowAllStudentsScreen();
+		void ShowStudentRegistrationScreen(); 
+		void IntroduceNewCourseScreen();
+		void ShowAllCoursesScreen();
 	}
-    class App : UserInterface
-    {
-        AppEngine appengine = new AppEngine();
-        public void showFirstScreen()
+    class SMS : UserInterface
+    {       
+        public void ShowFirstScreen()
         {
             Console.WriteLine("Your choices are \n1.Student\n2.Admin\n3.Exit");
             Console.Write("Enter your choice(1/2/3): ");
@@ -23,98 +22,77 @@ namespace CaseStudy
             switch (choice)
             {
                 case 1:
-                    showStudentScreen(); break;                   
+                    ShowStudentScreen(); break;                   
                 case 2:
-                    showAdminScreen(); break;
+                    ShowAdminScreen(); break;
                 case 3: break;
                 default:
                     Console.WriteLine("Invalid input...please enter 1 or 2 or 3"); break;
             }
         }
-        public void showStudentScreen()
+        public void ShowStudentScreen()
         {
-            Console.WriteLine("Student Screen");
-            Console.WriteLine("What do you want to do?\n1.Register details\n2.Show all courses\n3.Exit");
+            Console.WriteLine("-----Student Screen-----");
+            Console.WriteLine("What do you want to do?\n1.Show all courses\n2.Register details\n3.Exit");
             Console.Write("Enter your choice(1/2/3) : ");
             int choice = int.Parse(Console.ReadLine());
             switch (choice)
             {
                 case 1:
-                    showStudentRegistrationScreen(); break;
+                    ShowAllCoursesScreen();
+                    ShowStudentScreen();
+                    break;
                 case 2:
-                    showAllCoursesScreen();
-                    showStudentScreen();
+                    ShowStudentRegistrationScreen();
                     break;
                 case 3: break;
                 default:
                     Console.WriteLine("Invalid input"); break;
             }
         }        
-        public void showAdminScreen()
+        public void ShowAdminScreen()
         {
-            Console.WriteLine("Admin Screen");
+            Console.WriteLine("-----Admin Screen-----");
             Console.WriteLine("What do you want to do?\n1.Show all students\n2.Show all courses\n3.Introduce new courses\n4.Exit");
             Console.Write("Enter your choice(1/2/3/4) : ");
             int choice = int.Parse(Console.ReadLine());
             switch(choice)
             {
                 case 1:
-                    showAllStudentsScreen(); break;
+                    ShowAllStudentsScreen(); break;
                 case 2:
-                    showAllCoursesScreen();
-                    showAdminScreen();
+                    ShowAllCoursesScreen();
+                    ShowAdminScreen();
                     break;
                 case 3:
-                    introduceNewCourseScreen(); break;
+                    IntroduceNewCourseScreen(); break;
                 case 4: break;
                 default:
                     Console.WriteLine("Invalid input"); break;
             }
         }
-        public void showStudentRegistrationScreen()
+        public void ShowStudentRegistrationScreen()
         {
-            Console.WriteLine("Registration");
-            Console.Write("Enter your Name : ");
-            string name = Console.ReadLine();
-            Console.Write("Enter your Student ID :");
-            int id = int.Parse(Console.ReadLine());
-            Console.Write("Enter your Date of Birth(yyyy-dd-mm) : ");
-            DateTime dob = DateTime.Parse(Console.ReadLine());
-            Student student = new Student(id, name, dob);
-            Console.Write("Enter the Course ID : ");
-            int cid = int.Parse(Console.ReadLine());            
-            Console.Write("Enter the Course Name : ");
-            string cname = Console.ReadLine();
-            Course course = new Course(cid, cname);            
-            appengine.Enroll(student, course);
-            showStudentScreen();
+            Console.WriteLine("-----Registration-----");
+            Student.Student_enrollment();          
+            ShowStudentScreen();
         }
-        public void showAllCoursesScreen()
+        public void ShowAllCoursesScreen()
         {
-            Console.WriteLine("List of courses");           
-            appengine.ListofCourses();            
+            Console.WriteLine("-----List of courses-----");
+            Course.All_Courses();          
         }
 
-        public void showAllStudentsScreen()
+        public void ShowAllStudentsScreen()
         {
-            Scenarios.Scenario1();
-            Scenarios.Scenario2();
-            showAdminScreen();
+            Console.WriteLine("-----Enrolled Students-----");
+            Student.Enrolled_Students();
+            ShowAdminScreen();
         }
-        public void introduceNewCourseScreen()
+        public void IntroduceNewCourseScreen()
         {
-            Console.Write("Enter the no. of course(s) you want to introduce : ");
-            int count = int.Parse(Console.ReadLine());
-            for (int i = 0; i < count; i++)
-            {
-                Console.Write("Enter the Course ID : ");
-                int cid = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Enter the Course Name : ");
-                string cname = Console.ReadLine();
-                Course course=new Course(cid, cname);
-                appengine.Introduce(course);
-            }
-            showAdminScreen();
+            Course.Introduce_Courses();
+            ShowAdminScreen();
         }            
     }
 }

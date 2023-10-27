@@ -24,3 +24,16 @@ D:\CSharp training\CaseStudy(C#)\CaseStudy\obj\Debug\CaseStudy.csproj.CoreCompil
 D:\CSharp training\CaseStudy(C#)\CaseStudy\obj\Debug\CaseStudy.csproj.CopyComplete
 D:\CSharp training\CaseStudy(C#)\CaseStudy\obj\Debug\CaseStudy.exe
 D:\CSharp training\CaseStudy(C#)\CaseStudy\obj\Debug\CaseStudy.pdb
+D:\Hannah Philipraj ICS\CSharp training\CaseStudy(C#)\CaseStudy\bin\Debug\CaseStudy.exe.config
+D:\Hannah Philipraj ICS\CSharp training\CaseStudy(C#)\CaseStudy\bin\Debug\CaseStudy.exe
+D:\Hannah Philipraj ICS\CSharp training\CaseStudy(C#)\CaseStudy\bin\Debug\CaseStudy.pdb
+D:\Hannah Philipraj ICS\CSharp training\CaseStudy(C#)\CaseStudy\bin\Debug\NodaTime.dll
+D:\Hannah Philipraj ICS\CSharp training\CaseStudy(C#)\CaseStudy\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Hannah Philipraj ICS\CSharp training\CaseStudy(C#)\CaseStudy\bin\Debug\NodaTime.pdb
+D:\Hannah Philipraj ICS\CSharp training\CaseStudy(C#)\CaseStudy\bin\Debug\NodaTime.xml
+D:\Hannah Philipraj ICS\CSharp training\CaseStudy(C#)\CaseStudy\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Hannah Philipraj ICS\CSharp training\CaseStudy(C#)\CaseStudy\obj\Debug\CaseStudy.csproj.AssemblyReference.cache
+D:\Hannah Philipraj ICS\CSharp training\CaseStudy(C#)\CaseStudy\obj\Debug\CaseStudy.csproj.CoreCompileInputs.cache
+D:\Hannah Philipraj ICS\CSharp training\CaseStudy(C#)\CaseStudy\obj\Debug\CaseStudy.csproj.CopyComplete
+D:\Hannah Philipraj ICS\CSharp training\CaseStudy(C#)\CaseStudy\obj\Debug\CaseStudy.exe
+D:\Hannah Philipraj ICS\CSharp training\CaseStudy(C#)\CaseStudy\obj\Debug\CaseStudy.pdb

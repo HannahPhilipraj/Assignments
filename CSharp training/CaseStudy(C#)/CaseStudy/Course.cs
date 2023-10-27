@@ -1,61 +1,62 @@
-﻿using NodaTime;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using System.Data.SqlClient;
 
 namespace CaseStudy
 {
-    public class Course
+    class Course
     {
-        public int course_id { get; set; }
-        public string course_name { get; set; }
-        public Course(int courseId, string courseName)
+        public static SqlConnection con;
+        public static SqlCommand cmd;
+        public static SqlDataReader dr;
+        static SqlConnection Connection()
         {
-            this.course_id = courseId;
-            this.course_name = courseName;
+            con = new SqlConnection("Data Source=ICS-LT-GH26573;Initial Catalog=Tests;" +
+                "Integrated Security=True");
+            con.Open();
+            return con;
         }
-    }
-    public class Enroll
-    {
-        private Student enroll_student;
-        private Course enroll_course;
-        private LocalDate enrollmentdate;
-        public Enroll(Student stud,Course course,LocalDate enroll_date)
+        public static void All_Courses()
         {
-            this.enroll_student = stud;
-            this.enroll_course = course;
-            this.enrollmentdate = enroll_date;
-        }
-    } 
-    class AppEngine
-    {
-        List<Student> students = new List<Student>();                
-        public void Introduce(Course course)
-        {
-            Console.WriteLine("*****************");
-            Console.WriteLine("Course Introduced");
-            Console.WriteLine($"Course ID : {course.course_id}\nCourse Name : {course.course_name}");                      
-        }        
-        public void ListofCourses()
-        {
-            List<Course> courses = new List<Course>()
-            {
-               new Course(1001,"Java Programming"),new Course(1002,"Statistics"),new Course(1003,"Micro Biology"),
-               new Course(1004,"English"),new Course(1005,"Psychology")
-            };
-            foreach (var course in courses)
-            {
-                Info.Display2(course);
+            con = Connection();
+            cmd = new SqlCommand("select * from Courses",con);           
+            dr = cmd.ExecuteReader();
+            Console.WriteLine("====================================");
+            Console.WriteLine("Course ID   |    Course Name");
+            Console.WriteLine("====================================");
+            while (dr.Read())
+            {               
+                Console.WriteLine("{0}        |    {1}",dr[0],dr[1]);                              
             }
+            con.Close();
         }
-        public void Enroll(Student student,Course course)
+        public static void Introduce_Courses()
         {
-            DateTime dateTime = DateTime.Now;
-            Console.WriteLine("******************");
-            Console.WriteLine("Student enrollment in course");
-            Console.WriteLine($"Student ID : {student.student_id}\nStudent Name : {student.student_name}" +
-                $"\nStudent Date Of Birth : {student.student_dob}" +
-                $"\nCourse ID : {course.course_id}\nCourse Name : {course.course_name}"+
-                $"\nEnrollment Date :{dateTime}"); 
+            con = Connection();
+            try
+            {               
+                Console.Write("Enter the number of courses you want to introduce :");
+                int count = Convert.ToInt32(Console.ReadLine());
+                for(int i=0;i<count;i++)
+                {                    
+                    Console.Write("Enter Course Name : ");
+                    string cname = Console.ReadLine();
+                    cmd = new SqlCommand("Add_Course @cname", con);
+                    cmd.Parameters.AddWithValue("@cname", cname);
+                    Console.WriteLine($"Course {i+1} added");
+                    dr = cmd.ExecuteReader();
+                }
+                dr.Close();
+                Console.WriteLine("Course(s) added successfully");
+                All_Courses();
+                con.Close();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
+
+   
+   

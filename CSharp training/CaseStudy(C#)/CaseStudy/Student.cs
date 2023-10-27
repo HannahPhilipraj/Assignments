@@ -1,53 +1,68 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace CaseStudy
-{
-    public class Student
-    {
-        public int student_id{ get; set; }
-        public string student_name { get; set; }
-        public DateTime student_dob { get; set; }
-        public Student(int id,string name,DateTime dob)
+{    
+   class Student
+   {
+        public static SqlConnection con;
+        public static SqlCommand cmd;
+        public static SqlDataReader dr;
+       
+        public static void Student_enrollment()
         {
-            student_id = id;
-            student_name = name;
-            student_dob = dob;
-        }
-    }
-    class Info
-    {
-        public static void Display1(Student student)
-        {
-            Console.WriteLine($"Student ID : {student.student_id}\nStudent Name : {student.student_name}" +
-                $"\nStudent Date of birth : {student.student_dob}");
-            Console.WriteLine("************");
-        }
-        public static void Display2(Course course)
-        {
-            Console.WriteLine($"Course ID : {course.course_id}\nCourse Name : {course.course_name}");
-            Console.WriteLine("***************");
-        }
-    }
-    class Scenarios
-    {
-        public static void Scenario1()
-        {
-            Student student1 = new Student(101, "Abinaya", DateTime.Parse("2002-01-20"));
-            Student student2 = new Student(102, "Abinesh", DateTime.Parse("2001-04-24"));
-            Student student3 = new Student(103, "Abilash", DateTime.Parse("2002-09-13"));
-            Info.Display1(student1);
-            Info.Display1(student2);
-            Info.Display1(student3);
-        }
-        public static void Scenario2()
-        {
-            Student[] student_array = new Student[2];
-            student_array[0] = new Student(104, "Akshay", new DateTime(2002,11,25));
-            student_array[1] = new Student(105, "Adhanya", new DateTime(2001,12,21));
-            foreach (Student student in student_array)
+            con = new SqlConnection("Data Source=ICS-LT-GH26573;Initial Catalog=Tests;" +
+                "Integrated Security=True");
+            con.Open();
+            try
             {
-                Info.Display1(student);
+                Console.WriteLine("Here are the list of courses");
+                Course.All_Courses();
+                Console.WriteLine("Please enroll yourself");
+                Console.Write("Enter Student ID : ");
+                int stdid = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter Student Name : ");
+                string stdname = Console.ReadLine();
+                Console.Write("Enter Student Date of Birth(YYYY-MM-DD) : ");
+                DateTime dob = DateTime.Parse(Console.ReadLine());
+                cmd = new SqlCommand("insert into students values(@id,@name,@dob)", con);
+                cmd.Parameters.AddWithValue("@id", stdid);
+                cmd.Parameters.AddWithValue("@name", stdname);
+                cmd.Parameters.AddWithValue("@dob", dob);
+                cmd.ExecuteNonQuery();
+                Console.Write("Enter Course ID : ");
+                int cid = int.Parse(Console.ReadLine());
+                DateTime enrolldate = DateTime.Now;
+                SqlCommand cmd1 = new SqlCommand("insert into enrollment values(@sid,@cid,@edate)", con);
+                cmd1.Parameters.AddWithValue("@sid", stdid);
+                cmd1.Parameters.AddWithValue("@cid", cid);
+                cmd1.Parameters.AddWithValue("@edate", enrolldate);
+                cmd1.ExecuteNonQuery();
+                Console.WriteLine("Registeration completed successfully");
+                con.Close();
             }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
         }
-    }
+        public static void Enrolled_Students()
+        {
+            con = new SqlConnection("Data Source=ICS-LT-GH26573;Initial Catalog=Tests;" +
+           "Integrated Security=True");
+            con.Open();
+                cmd = new SqlCommand("select * from Enrollment", con);
+                dr = cmd.ExecuteReader();
+                Console.WriteLine("==============================================================");
+                Console.WriteLine("Student ID  |    Course ID     |    Enrollment Date");
+                Console.WriteLine("==============================================================");
+                while (dr.Read())
+                {
+                    Console.WriteLine("{0}          |    {1}           | {2}  ", dr[0], dr[1],dr[2]);
+                }
+                con.Close();                        
+        }
+   }     
 }
