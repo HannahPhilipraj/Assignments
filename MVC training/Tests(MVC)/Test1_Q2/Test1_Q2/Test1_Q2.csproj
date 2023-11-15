@@ -133,24 +133,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Movie.cs">
-      <DependentUpon>Moviesmodel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Moviesmodel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Moviesmodel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Moviesmodel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Moviesmodel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Moviesmodel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Moviesmodel.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -162,25 +146,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Moviesmodel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Moviesmodel.edmx</DependentUpon>
-      <LastGenOutput>Moviesmodel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Moviesmodel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Moviesmodel.edmx</DependentUpon>
-      <LastGenOutput>Moviesmodel.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\Moviesmodel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Moviesmodel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Moviesmodel.edmx.diagram">
-      <DependentUpon>Moviesmodel.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -206,10 +173,12 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\ByYear.cshtml" />
+    <Content Include="Views\Movies\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Movies\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

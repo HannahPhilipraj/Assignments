@@ -76,7 +76,6 @@ D:\Hannah Philipraj ICS\MVC training\Tests(MVC)\Test1_Q2\Test1_Q2\bin\System.Web
 D:\Hannah Philipraj ICS\MVC training\Tests(MVC)\Test1_Q2\Test1_Q2\bin\Newtonsoft.Json.xml
 D:\Hannah Philipraj ICS\MVC training\Tests(MVC)\Test1_Q2\Test1_Q2\bin\Antlr3.Runtime.pdb
 D:\Hannah Philipraj ICS\MVC training\Tests(MVC)\Test1_Q2\Test1_Q2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Hannah Philipraj ICS\MVC training\Tests(MVC)\Test1_Q2\Test1_Q2\obj\Debug\Test1_Q2.csproj.AssemblyReference.cache
 D:\Hannah Philipraj ICS\MVC training\Tests(MVC)\Test1_Q2\Test1_Q2\obj\Debug\Test1_Q2.csproj.CoreCompileInputs.cache
 D:\Hannah Philipraj ICS\MVC training\Tests(MVC)\Test1_Q2\Test1_Q2\obj\Debug\Test1_Q2.csproj.CopyComplete
 D:\Hannah Philipraj ICS\MVC training\Tests(MVC)\Test1_Q2\Test1_Q2\obj\Debug\Test1_Q2.dll
